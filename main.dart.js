@@ -7931,7 +7931,7 @@ kU:function kU(a){this.a=a},
 ali:function(a,b,c){K.bo(a)
 c>0
 return b},
-f3:function(a){if(a.P(t.w).f.a.a<=640)return C.aJ
+f3:function(a){if(a.P(t.w).f.a.a<=1007)return C.aJ
 return C.xy},
 jd:function(a,b,c,d,e){var s,r,q=null,p="Montserrat"
 switch(e){case C.vs:s=C.e

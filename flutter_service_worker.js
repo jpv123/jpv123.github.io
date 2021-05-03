@@ -3,46 +3,18 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "f3d11f80f6fbd884402f5bb95f846752",
-"index.html": "5738a0c84901844677046b2ea6b2cf29",
-"/": "5738a0c84901844677046b2ea6b2cf29",
-"main.dart.js": "7e0729c36467f79f7a79d106c0539f1e",
-"README.md": "3d5cb158e980fe2bf4c28a3fe901beba",
+  "version.json": "f00be113ecc2342d4c99161be2dc1c7d",
+"index.html": "dff42907ca29b9459f6ff66cd36a2d87",
+"/": "dff42907ca29b9459f6ff66cd36a2d87",
+"main.dart.js": "172064fbc9d85336a31c6b65369b82fa",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "8ffdfc645a87c4bac4bcce3ec248498d",
-".git/config": "805ff34ac465def587c9a92d6d09e495",
-".git/objects/43/08d3c9e8424bbef6425664c185b51f0831c059": "cec06cf619dbac9c6b405d4b8d1ebbea",
-".git/objects/06/139c6d0a011cfa85213206ce5ab705c75d41eb": "8020b4e37475be36ddbe5bfe8e9f74a6",
-".git/objects/cd/04480b168d6c9319ca47af373479d4110e51e1": "5b3159ca9bf4b95cbbee29789f526798",
-".git/HEAD": "cf7dd3ce51958c5f13fece957cc417fb",
-".git/info/exclude": "036208b4a1ab4a235d75c181e685e5a3",
-".git/logs/HEAD": "18ab6b4a25e790e670b3abebc2824651",
-".git/logs/refs/heads/main": "36d0374c59d3577ef3432f8134d83e08",
-".git/logs/refs/remotes/origin/main": "62f4b5c5a6f412b5203beff92bf224bc",
-".git/description": "a0a7c3fff21f2aea3cfa1d0316dd816c",
-".git/hooks/commit-msg.sample": "579a3c1e12a1e74a98169175fb913012",
-".git/hooks/pre-rebase.sample": "56e45f2bcbc8226d2b4200f7c46371bf",
-".git/hooks/pre-commit.sample": "e4db8c12ee125a8a085907b757359ef0",
-".git/hooks/applypatch-msg.sample": "ce562e08d8098926a3862fc6e7905199",
-".git/hooks/fsmonitor-watchman.sample": "ecbb0cb5ffb7d773cd5b2407b210cc3b",
-".git/hooks/pre-receive.sample": "2ad18ec82c20af7b5926ed9cea6aeedd",
-".git/hooks/prepare-commit-msg.sample": "2b5c047bdb474555e1787db32b2d2fc5",
-".git/hooks/post-update.sample": "2b7ea5cee3c49ff53d41e00785eb974c",
-".git/hooks/pre-merge-commit.sample": "39cb268e2a85d436b9eb6f47614c3cbc",
-".git/hooks/pre-applypatch.sample": "054f9ffb8bfe04a599751cc757226dda",
-".git/hooks/pre-push.sample": "3c5989301dd4b949dfa1f43738a22819",
-".git/hooks/update.sample": "517f14b9239689dff8bda3022ebd9004",
-".git/refs/heads/main": "bd9d1aa8c166b5fb0dd9d90ea147b533",
-".git/refs/remotes/origin/main": "bd9d1aa8c166b5fb0dd9d90ea147b533",
-".git/index": "4c2e0b15c6daea8dfaf06c4032a3dcc0",
-".git/FETCH_HEAD": "2bb2f59b42cbc24045c0036d0845e42f",
-".git/sourcetreeconfig": "a7cfc8c224caccfc14fc364e8c96576f",
+"manifest.json": "26b73590e8ff601e652d72af556281c6",
 "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
-"assets/NOTICES": "ee46c3b5c9f21ead637e489c91bfd715",
+"assets/NOTICES": "3d15518863a717aeb9709552e60b6871",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac"
 };
 
@@ -187,7 +159,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
